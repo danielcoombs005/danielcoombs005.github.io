@@ -1,0 +1,36 @@
+.header {
+    background-color: green;
+    display: flex;
+    height: 50px;
+}
+
+.header > * {
+    cursor: pointer;
+}
+
+.header-text-options {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: end;
+    margin-right: 10px;
+    text-align: center;
+    width: 96%;
+}
+
+.header-text-options > div {
+    width: 80px;
+}
+
+.home-button {
+    border: 3px solid;
+    border-radius: 30px;
+    font-size: 20px;
+    height: 31px;
+    left: 15px;
+    padding-top: 3px;
+    position: relative;
+    text-align: center;
+    top: 5px;
+    width: 35px;
+}

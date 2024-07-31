@@ -1,0 +1,16 @@
+.footer {
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+}
+
+.footer > * {
+    font-size: 13px;
+    padding: 2px;
+}
+
+.footer > a {
+    color: blue;
+}

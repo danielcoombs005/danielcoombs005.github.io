@@ -1,0 +1,9 @@
+.email {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.about-me > p > a {
+    color: blue;
+}
