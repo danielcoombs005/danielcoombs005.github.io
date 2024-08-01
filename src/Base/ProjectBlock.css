@@ -1,0 +1,59 @@
+.circle {
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    position: relative;
+    top: 2px;
+    width: 15px;
+}
+
+.project-block {
+    border: 1px solid;
+    height: 225px;
+}
+
+.project-block-description {
+    height: 176px;
+    padding-left: 27px;
+    padding-right: 5px;
+    white-space: preserve;
+}
+
+.project-block-inner {
+    display: flex;
+    margin: 10px;
+}
+
+.project-image {
+    height: 133px;
+    width: 200px;
+    top: 18px!important;
+}
+
+.project-block-left {
+    display: inline;
+}
+
+.project-block-left > * {
+    left: 15px;
+    position: relative;
+}
+
+.project-block-left > a {
+    color: blue;
+    font-size: 22px;
+}
+
+.project-block-left-status {
+    font-size: 14px;
+}
+
+.project-block-right {
+    margin-top: 5px;
+}
+
+.project-block-right-tools {
+    display: flex;
+    justify-content: center;
+    white-space: preserve;
+}

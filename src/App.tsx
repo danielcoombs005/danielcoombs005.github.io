@@ -3,6 +3,7 @@ import Header from './Base/Header';
 import Footer from './Base/Footer';
 import AboutMe from './Pages/AboutMe';
 import LandingPage from './Pages/LandingPage';
+import Projects from './Pages/ProjectPage';
 import { PageType } from './Structures/Enums';
 import './App.css';
 
@@ -21,6 +22,9 @@ function App() {
         }
         {currentPage === PageType.AboutMe &&
           <AboutMe />
+        }
+        {currentPage === PageType.Projects &&
+          <Projects />
         }
       </div>
       <Footer />
