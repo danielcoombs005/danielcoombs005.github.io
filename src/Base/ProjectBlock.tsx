@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import { IProjectData } from '../Structures/Interfaces';
 import { Status } from '../Structures/Enums';
 import './ProjectBlock.css';
@@ -50,7 +49,7 @@ export default function ProjectBlock(props: IProjectData) {
                 <div className='project-block-left'>
                     <a href={props.githubURL} target='_'>{props.name}</a>
                     <div className='project-block-left-status'>Status: {renderCircle(props.status)} {props.status}</div>
-                    <img className='project-image' src={props.image} alt={props.image} />
+                    <img className='project-image' src={process.env.PUBLIC_URL+'/'+props.image} alt={props.image} />
                 </div>
                 <div className='project-block-right'>
                     <div className='project-block-description'>{props.description}</div> 

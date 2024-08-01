@@ -2,7 +2,7 @@
     "projects": [
         {
             "description": "A landing page of my portfolio which contains a summary of who I am and my experience, resources to contact me through, and a preview of my projects with a direct link.\n\nI primarily focused on styling while building this single-page application. I've not had much professional experience with CSS animations or design, and I would like to explore this further.",
-            "image": "https://media.istockphoto.com/id/1225517650/photo/single-big-oak-tree-in-meadow.jpg?s=612x612&w=0&k=20&c=2DOWsqMW1hDOmn7XlF09IAuOToq28EXpsNgZ8wzhURU=",
+            "image": "portfolio.jpg",
             "githubURL": "https://danielcoombs005.github.io/",
             "languages": ["HTML5", "CSS3", "TypeScript"],
             "name": "Portfolio",
