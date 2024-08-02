@@ -44,11 +44,14 @@ function printList(items: string[]) {
 
 export default function ProjectBlock(props: IProjectData) {
     return (
-        <div className={'project-block'}>
+        <div className='project-block'>
             <div className='project-block-inner'>
                 <div className='project-block-left'>
-                    <a href={props.githubURL} target='_'>{props.name}</a>
+                    <a href={props.websiteURL} target='_'>{props.name}</a>
                     <div className='project-block-left-status'>Status: {renderCircle(props.status)} {props.status}</div>
+                    <div className='project-block-repository'>
+                        <a href={props.githubURL} target='_'>Repository</a>
+                    </div>
                     <img className='project-image' src={process.env.PUBLIC_URL+'/'+props.image} alt={props.image} />
                 </div>
                 <div className='project-block-right'>

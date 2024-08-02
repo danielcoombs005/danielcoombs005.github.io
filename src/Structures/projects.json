@@ -3,11 +3,12 @@
         {
             "description": "The landing page of my portfolio which contains a summary of who I am and my experience, resources to contact me through, and a preview of my projects with a direct link.\n\nI primarily focused on styling while building this single-page application. I've not had much professional experience with CSS animations or design, and I would like to explore this further.",
             "image": "portfolio.jpg",
-            "githubURL": "https://danielcoombs005.github.io/",
+            "githubURL": "https://github.com/danielcoombs005/danielcoombs005.github.io",
             "languages": ["HTML5", "CSS3", "TypeScript"],
             "name": "Portfolio",
             "status": "In Progress",
-            "tools": ["React", "VS Code"]
+            "tools": ["React", "VS Code"],
+            "websiteURL": "https://danielcoombs005.github.io/"
         },
         {
             "description": "A series of visual demonstrations of popular sorting algorithms using bar charts, dynamic delay and sortable elements, and colorful representations.\n\nMy greatest challenge during this project was trying to make the algorithms visually possible. The algorithms are straightforward in implementation, but adding the visual aspect to a dynamically changing array, especially for merge and quick sorts, was quite the challenge!",
@@ -16,7 +17,8 @@
             "languages": ["HTML5", "CSS3", "TypeScript"],
             "name": "Sorting Algorithm",
             "status": "In Progress",
-            "tools": ["React", "VS Code"]
+            "tools": ["React", "VS Code"],
+            "websiteURL": "https://danielcoombs005.github.io/"
         }
     ]
 }

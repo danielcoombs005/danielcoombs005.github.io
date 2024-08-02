@@ -28,7 +28,6 @@
 .project-image {
     height: 133px;
     width: 200px;
-    top: 18px!important;
 }
 
 .project-block-left {
@@ -41,12 +40,19 @@
 }
 
 .project-block-left > a {
-    color: blue;
     font-size: 22px;
 }
 
 .project-block-left-status {
     font-size: 14px;
+}
+
+.project-block-repository {
+    bottom: 5px;
+}
+
+.project-block-repository > a {
+    font-size: 15px;
 }
 
 .project-block-right {

@@ -13,10 +13,11 @@ export interface IProjectListData {
 
 export interface IProjectData {
     description: string;
-    image: string;
     githubURL: string;
+    image: string;
     languages: string[];
     name: string;
     status: string;
     tools: string[];
+    websiteURL: string;
 }

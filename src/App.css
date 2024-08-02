@@ -1,8 +1,13 @@
 .app {
+  color: #E6E8EB;
   height: 100%;
 }
 
 .app-body {
-  margin: 30px;
+  margin: 0 3%;
   text-align: center;
+}
+
+* > a {
+  color: #153E7D!important;
 }

@@ -12,19 +12,19 @@ function App() {
 
   return (
     <div className="app">
-      <Header
+      {/* <Header
         currentPage={currentPage}
-        setCurrentPage={setCurrentPage} />
+        setCurrentPage={setCurrentPage} /> */}
       <div className='app-body'>
-        {currentPage === PageType.LandingPage &&
+        {/*currentPage === PageType.LandingPage &&*/
           <LandingPage
             setCurrentPage={setCurrentPage} />
         }
-        {currentPage === PageType.AboutMe &&
+        {/*currentPage === PageType.AboutMe &&*/
           <AboutMe 
             setCurrentPage={setCurrentPage}/>
         }
-        {currentPage === PageType.Projects &&
+        {/*currentPage === PageType.Projects &&*/
           <Projects />
         }
       </div>
