@@ -1,6 +1,6 @@
 import './Introduction.css'
 
-export default function Introduction(props: any) {
+export default function Introduction() {
     return (
         <div className='introduction'>
             <h1>Daniel Coombs</h1>

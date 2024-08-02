@@ -21,7 +21,8 @@ function App() {
             setCurrentPage={setCurrentPage} />
         }
         {currentPage === PageType.AboutMe &&
-          <AboutMe />
+          <AboutMe 
+            setCurrentPage={setCurrentPage}/>
         }
         {currentPage === PageType.Projects &&
           <Projects />

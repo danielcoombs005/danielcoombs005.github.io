@@ -6,7 +6,7 @@ import './LandingPage.css';
 export default function LandingPage(props: IPageHandling) {
     return (
         <div className='landing-page'>
-            <Introduction setCurrentPage={props.setCurrentPage} />
+            <Introduction />
             <RedirectBlocks setCurrentPage={props.setCurrentPage} />
         </div>
     )
