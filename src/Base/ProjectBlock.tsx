@@ -44,7 +44,7 @@ function printList(items: string[]) {
 
 export default function ProjectBlock(props: IProjectData) {
     return (
-        <div className='project-block'>
+        <div className={'project-block'}>
             <div className='project-block-inner'>
                 <div className='project-block-left'>
                     <a href={props.githubURL} target='_'>{props.name}</a>
