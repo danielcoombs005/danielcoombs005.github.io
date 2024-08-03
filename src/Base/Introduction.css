@@ -1,15 +1,49 @@
-.introduction > * {
-    color: blue;
+.introduction {
+    flex: 50%;
 }
 
-.introduction > p {
-    margin: 0px;
+#name {
+    font-size: 65px;
+    margin: 10px 10px 0;
 }
 
-h1 {
-    margin: 10px;
+#sources > * {
+    bottom: 8px;
+    position: relative;
 }
 
-h3 {
-    margin: 0px;
+#summary {
+    font-size: 22px;
+    margin: 36px;
+}
+
+#title {
+    bottom: 10px;
+    font-size: 25px;
+    margin: 0;
+    position: relative;
+}
+
+.fadeIn {
+    opacity: 1;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+}
+
+.fadeIn.transition {
+    opacity: 0;
+}
+
+.fadeOut {
+    opacity: 0;
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+}
+
+.fadeOut.transition {
+    opacity: 1;
 }

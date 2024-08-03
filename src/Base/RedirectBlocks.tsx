@@ -5,9 +5,9 @@ import './RedirectBlocks.css';
 export default function RedirectBlocks(props: IPageHandling) {
     return (
         <div className='redirect-blocks'>
-            <div onClick={() => props.setCurrentPage(PageType.AboutMe)}>About Me</div>
-            <div onClick={() => props.setCurrentPage(PageType.Contact)}>Contact</div>
-            <div onClick={() => props.setCurrentPage(PageType.Projects)}>Projects</div>
+            <div onClick={() => props.moveToSection('about-me-page', PageType.AboutMe)}>About Me</div>
+            <div onClick={() => props.moveToSection('contact-page', PageType.Contact)}>Contact</div>
+            <div onClick={() => props.moveToSection('project-page', PageType.Projects)}>Projects</div>
         </div>
     )
 }

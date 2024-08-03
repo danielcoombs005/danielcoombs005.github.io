@@ -23,7 +23,7 @@ export default function AboutMe(props: IPageHandling) {
             </p>
             <p>
                 I'm currently open to new opportunities!
-                If you'd like to learn more about my prior experience and personal work, feel free to check out my <span onClick={() => props.setCurrentPage(PageType.Projects)}>projects</span>.
+                If you'd like to learn more about my prior experience and personal work, feel free to check out my <span onClick={() => props.moveToSection('project-page', PageType.Projects)}>projects</span>.
                 You can also contact me by <span onClick={() => getEmail()}>email</span> or my <a href='https://www.linkedin.com/in/daniel-coombs-402934135/' target='_'>LinkedIn page</a>.
             </p>
         </div>

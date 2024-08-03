@@ -1,32 +1,35 @@
 import { useState } from 'react';
-import Header from './Base/Header';
 import Footer from './Base/Footer';
-import AboutMe from './Pages/AboutMe';
 import LandingPage from './Pages/LandingPage';
 import Projects from './Pages/ProjectPage';
 import { PageType } from './Structures/Enums';
 import './App.css';
+import RedirectBlocks from './Base/RedirectBlocks';
 
 function App() {
-  let [currentPage, setCurrentPage] = useState(PageType.LandingPage);
+  let [currentSection, setCurrentSection] = useState(PageType.LandingPage);
+
+  function moveToSection(id: string, section: number) {
+    let selectedElement = document.getElementsByClassName('redirect-block-selected');
+    if (selectedElement.length > 0) {
+      selectedElement[0].classList.remove('redirect-block-selected');
+    }
+
+    document.getElementById(id)?.scrollIntoView();
+    setCurrentSection(section);
+  }
 
   return (
     <div className="app">
-      {/* <Header
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage} /> */}
       <div className='app-body'>
-        {/*currentPage === PageType.LandingPage &&*/
+        <div>
+          <RedirectBlocks moveToSection={moveToSection} />
+        </div>
+        <div>
           <LandingPage
-            setCurrentPage={setCurrentPage} />
-        }
-        {/*currentPage === PageType.AboutMe &&*/
-          <AboutMe 
-            setCurrentPage={setCurrentPage}/>
-        }
-        {/*currentPage === PageType.Projects &&*/
+            moveToSection={moveToSection} />
           <Projects />
-        }
+        </div>
       </div>
       <Footer />
     </div>

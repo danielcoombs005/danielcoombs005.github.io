@@ -1,10 +1,10 @@
 export interface IHeader {
-    currentPage: number;
-    setCurrentPage: Function;
+    currentSection: number;
+    setCurrentSection: Function;
 }
 
 export interface IPageHandling {
-    setCurrentPage: Function;
+    moveToSection: Function;
 }
 
 export interface IProjectListData {

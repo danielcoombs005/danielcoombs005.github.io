@@ -1,4 +1,7 @@
-.about-me > p > a, span {
-    cursor: pointer;
-    text-decoration: underline;
+.about-me {
+    flex: 70%;
+}
+
+.about-me > p {
+    text-align: justify;
 }
