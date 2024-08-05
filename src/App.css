@@ -4,8 +4,32 @@
 }
 
 .app-body {
+  height: 100%;
   margin: 0 3%;
   text-align: center;
+}
+
+.app-body-left-side {
+  flex: 50%;
+}
+
+.app-body-redirect-blocks {
+  height: 10%;
+}
+
+.app-body-right-side {
+  flex: 50%;
+}
+
+.app-body-right-side > div {
+  width:88%;
+}
+
+.app-body-split {
+  align-items: center;
+  display: flex;
+  height: 90%;
+  justify-content: center;
 }
 
 * > a {

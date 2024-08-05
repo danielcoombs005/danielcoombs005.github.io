@@ -5,9 +5,10 @@ import Projects from './Pages/ProjectPage';
 import { PageType } from './Structures/Enums';
 import './App.css';
 import RedirectBlocks from './Base/RedirectBlocks';
+import Introduction from './Base/Introduction';
 
 function App() {
-  let [currentSection, setCurrentSection] = useState(PageType.LandingPage);
+  let [currentSection, setCurrentSection] = useState(PageType.AboutMe);
 
   function moveToSection(id: string, section: number) {
     let selectedElement = document.getElementsByClassName('redirect-block-selected');
@@ -22,13 +23,22 @@ function App() {
   return (
     <div className="app">
       <div className='app-body'>
-        <div>
+        <div className='app-body-redirect-blocks'>
           <RedirectBlocks moveToSection={moveToSection} />
         </div>
-        <div>
-          <LandingPage
-            moveToSection={moveToSection} />
-          <Projects />
+        <div className='app-body-split'>
+          <div className='app-body-left-side'>
+            <Introduction />
+          </div>
+          <div className='app-body-right-side'>
+            {currentSection === PageType.AboutMe &&
+              <LandingPage
+                moveToSection={moveToSection} />
+            }
+            {currentSection === PageType.Projects &&
+              <Projects />
+            }
+          </div>
         </div>
       </div>
       <Footer />

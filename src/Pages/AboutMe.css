@@ -1,7 +1,3 @@
-.about-me {
-    flex: 70%;
-}
-
 .about-me > p {
     text-align: justify;
 }

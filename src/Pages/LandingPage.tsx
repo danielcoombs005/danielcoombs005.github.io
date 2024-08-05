@@ -6,7 +6,7 @@ import './LandingPage.css';
 export default function LandingPage(props: IPageHandling) {
     return (
         <div id='landing-page'>
-            <Introduction />
+            {/* <Introduction /> */}
             <AboutMe
                 moveToSection={props.moveToSection}
             />

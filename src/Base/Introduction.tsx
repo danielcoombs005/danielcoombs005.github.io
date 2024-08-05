@@ -7,7 +7,7 @@ const messages: string[] = ['I build websites.', 'I love puzzles! Maybe you shou
 
 const delay = (timeInMS: number): Promise<any> => {
     return new Promise(resolve => setTimeout(resolve, timeInMS));
-  };
+};
 
 export default function Introduction() {
     const [messageIndex, setMessageIndex] = useState(0);
@@ -24,8 +24,7 @@ export default function Introduction() {
                 messageElement!.classList.add('fadeIn');
             });
         }
-
-    }, messageTime)
+    }, messageTime);
 
     return (
         <div className='introduction'>
