@@ -1,3 +1,8 @@
+export enum Direction {
+    Up = 1,
+    Down = 2
+}
+
 export enum PageType {
     LandingPage = 1,
     AboutMe = 2,

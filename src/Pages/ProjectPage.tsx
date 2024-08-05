@@ -1,42 +1,87 @@
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import ProjectBlock from '../Base/ProjectBlock';
+import { Direction } from '../Structures/Enums';
 import { IProjectData } from '../Structures/Interfaces';
 import projectData from '../Structures/projects.json';
 import './ProjectPage.css';
 
-function prepareProjectsLayout() {
-    let projectCount: number = projectData.projects.length;
-    let projectsRender: ReactElement[] = [];
-    let elementLeft, elementMiddle, elementRight;
-
-    function createReactElement(project: IProjectData, index: number) {
-        return (<ProjectBlock {...project} key={'project' + index} />);
-    }
-
-    function createRowReactElement(leftSideElement: ReactElement, rightSideElement: ReactElement | null, index: number) {
-        return (<div className='projects-row' key={'project-row' + index}>{leftSideElement}{rightSideElement ?? '' }</div>)
-    }
-
-    for (let i = 0; i < projectCount; i += 2) {
-        if (i + 2 > projectCount && projectCount % 2 === 1) {
-            elementMiddle = createReactElement(projectData.projects[projectCount - 1], projectCount - 1);
-            projectsRender.push(createRowReactElement(elementMiddle, null, i));
-        } else {
-            elementLeft = createReactElement(projectData.projects[i], i);
-            elementRight = createReactElement(projectData.projects[i + 1], i + 1);
-
-            projectsRender.push(createRowReactElement(elementLeft, elementRight, i));
+export default class Projects extends React.Component<any, any> {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            projectPage: 0,
+            upArrowDisabled: true,
+            downArrowDisabled: false
         }
     }
 
-    return projectsRender;
-}
+    componentDidMount = () => {
+        this.setState({
+            downArrowDisabled: projectData.projects.length <= 2
+        })
+    }
 
-export default function Projects() {
-    return (
-        <div id='project-page'>
-            <h1>PROJECTS</h1>
-            {prepareProjectsLayout()}
-        </div>
-    )
+    getTotalPageCount = () => {
+        const projectCount: number = projectData.projects.length;
+        let pageCount: number = Math.floor(projectCount / 2);
+
+        if (projectCount % 2 === 1) {
+            pageCount++;
+        } 
+
+        return pageCount;
+    }
+
+    updatePage(direction: Direction) {
+        const projectsLength = projectData.projects.length;
+        let projectPage = this.state.projectPage;
+
+        const newPage = projectPage + (direction === Direction.Up ? -1 : 1);
+        if (newPage >= 0 && newPage < (projectsLength / 2)) {
+            projectPage = newPage;
+        }
+
+        const upArrowDisabled = newPage <= 0 || projectsLength <= 2;
+        const downArrowDisabled = newPage >= this.getTotalPageCount() - 1;
+
+        this.setState({
+            projectPage: projectPage,
+            upArrowDisabled: upArrowDisabled,
+            downArrowDisabled: downArrowDisabled
+        })
+    
+    }
+    
+    displayProjects() {
+        let projects = projectData.projects.slice(2*this.state.projectPage, 2*this.state.projectPage + 2);
+        let projectsList: ReactElement[] = [];
+    
+        projects.map((project: IProjectData, index: number) => {
+            projectsList.push(<ProjectBlock {...project} key={'project' + index} />);
+        })
+    
+        let projectsRender: ReactElement = React.createElement('div', { className: 'projects-group', onScroll: (event: any) => console.log(event)}, projectsList);
+    
+        return projectsRender;
+    }
+
+    render() {
+        return (
+            <div id='project-page'>
+                <h1>PROJECTS</h1>
+                <div className='project-page-number-section'>
+                    <img className='project-image'
+                        src={`${process.env.PUBLIC_URL}/up-arrow${this.state.upArrowDisabled ? '-disabled' : ''}.png`}
+                        alt={'UP ARROW'}
+                        onClick={() => this.updatePage(Direction.Up)} />
+                    <span>Page {this.state.projectPage + 1} of {this.getTotalPageCount()}</span>
+                    <img className='project-image'
+                        src={`${process.env.PUBLIC_URL}/down-arrow${this.state.downArrowDisabled ? '-disabled' : ''}.png`}
+                        alt={'DOWN ARROW'}
+                        onClick={() => this.updatePage(Direction.Down)} />
+                </div>
+                {this.displayProjects()}
+            </div>
+        )
+    }
 }
