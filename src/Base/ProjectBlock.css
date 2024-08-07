@@ -17,7 +17,24 @@
     text-align: justify;
     padding-left: 27px;
     padding-right: 5px;
+    overflow-y: scroll;
+    scrollbar-width: none;
     white-space: preserve;
+}
+
+/* @-moz-document url-prefix() {
+    .project-block-description:hover {
+        color: blue;
+        scrollbar-width: 5px!important;
+    }
+}  */
+
+.project-block-description::-webit-scrollbar {
+    display: none;
+}
+
+.project-block-description::-webit-scrollbar:hover {
+    display: block;
 }
 
 .project-block-inner {

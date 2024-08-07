@@ -1,16 +1,44 @@
-.projects-group {
-    overflow-y: auto;
+.project-image-left {
+    right: 5px;
+}
+
+.project-image-right {
+    left: 5px;
 }
 
 .project-page-number-section {
     display: flex;
     justify-content: center;
+    height: 30px;
+    position: relative;
+    top: 15px;
 }
 
 .project-page-number-section > img {
     height: 20px;
+    margin: 2px;
+    position: relative;
     width: 20px;
 }
+
+.project-page-number-section > img:hover {
+    height: 25px;
+    margin: 0px;
+    transition: all 0.5s;
+    transition-timing-function: ease;
+    width: 25px;
+}
+
+/* Must be used in React for reverse animation */
+.project-page-number-section > img:not(:hover) {
+    transition: all 0.5s;
+    transition-timing-function: ease;
+}
+
+.projects-group {
+    
+}
+
 
 .projects-row {
     display: flex;
