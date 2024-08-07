@@ -1,9 +1,7 @@
-export interface IHeader {
-    currentSection: number;
-    setCurrentSection: Function;
-}
+import { PageType } from "./Enums";
 
 export interface IPageHandling {
+    currentSection: PageType;
     moveToSection: Function;
 }
 

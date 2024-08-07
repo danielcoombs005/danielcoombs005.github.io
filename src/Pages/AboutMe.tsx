@@ -1,12 +1,10 @@
-import { PageType } from '../Structures/Enums';
-import { IPageHandling } from '../Structures/Interfaces';
 import './AboutMe.css';
 
 function getEmail() {
     navigator.clipboard.writeText('TODO');
 }
 
-export default function AboutMe(props: IPageHandling) {
+export default function AboutMe() {
     return (
         <div className='about-me'>
             <p>
@@ -23,8 +21,8 @@ export default function AboutMe(props: IPageHandling) {
             </p>
             <p>
                 I'm currently open to new opportunities!
-                If you'd like to learn more about my prior experience and personal work, feel free to check out my <span onClick={() => props.moveToSection('project-page', PageType.Projects)}>projects</span>.
-                You can also contact me by <span onClick={() => getEmail()}>email</span> or my <a href='https://www.linkedin.com/in/daniel-coombs-402934135/' target='_'>LinkedIn page</a>.
+                If you'd like to learn more about my prior experience and personal work, feel free to check out my projects.
+                You can also contact me by or my LinkedIn page.
             </p>
         </div>
     )

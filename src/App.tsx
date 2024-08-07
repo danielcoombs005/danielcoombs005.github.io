@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Footer from './Base/Footer';
-import LandingPage from './Pages/LandingPage';
+import AboutMe from './Pages/AboutMe';
 import Projects from './Pages/ProjectPage';
 import { PageType } from './Structures/Enums';
 import './App.css';
@@ -24,7 +24,9 @@ function App() {
     <div className="app">
       <div className='app-body'>
         <div className='app-body-redirect-blocks'>
-          <RedirectBlocks moveToSection={moveToSection} />
+          <RedirectBlocks 
+            currentSection={currentSection}
+            moveToSection={moveToSection} />
         </div>
         <div className='app-body-split'>
           <div className='app-body-left-side'>
@@ -32,8 +34,7 @@ function App() {
           </div>
           <div className='app-body-right-side'>
             {currentSection === PageType.AboutMe &&
-              <LandingPage
-                moveToSection={moveToSection} />
+              <AboutMe />
             }
             {currentSection === PageType.Projects &&
               <Projects />

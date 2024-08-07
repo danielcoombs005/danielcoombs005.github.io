@@ -1,6 +1,7 @@
 .redirect-blocks {
     display: flex;
     justify-content: center;
+    transition: all 1s ease;
 }
 
 .redirect-blocks > div {
@@ -13,12 +14,16 @@
     width: 150px;
 }
 
-.redirect-block > div:hover {
-    
-}
-
 .redirect-block-selected {
     background-color: #E6E8EB;
-    border: 1px solid #153E7D;
+    border: 3px solid #153E7D;
     color: #153E7D;
+    transition: all 1s ease;
+}
+
+.redirect-block-not-selected {
+    background-color: transparent;
+    border: 1px solid #E6E8EB;
+    color: #E6E8EB;
+    transition: all 1s ease;
 }
