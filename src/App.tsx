@@ -1,30 +1,37 @@
 import { useState } from 'react';
+import { delay } from './Base/CommonLogic';
 import Footer from './Base/Footer';
+import Introduction from './Base/Introduction';
+import RedirectBlocks from './Base/RedirectBlocks';
 import AboutMe from './Pages/AboutMe';
 import Projects from './Pages/ProjectPage';
 import { PageType } from './Structures/Enums';
 import './App.css';
-import RedirectBlocks from './Base/RedirectBlocks';
-import Introduction from './Base/Introduction';
 
 function App() {
   let [currentSection, setCurrentSection] = useState(PageType.AboutMe);
 
-  function moveToSection(id: string, section: number) {
-    let selectedElement = document.getElementsByClassName('redirect-block-selected');
-    if (selectedElement.length > 0) {
-      selectedElement[0].classList.remove('redirect-block-selected');
-    }
+  async function moveToSection(id: string, section: number) {
+    if (section !== currentSection) {
+      let selectedElement = document.getElementsByClassName('redirect-block-selected');
+      if (selectedElement.length > 0) {
+        selectedElement[0].classList.remove('redirect-block-selected');
+      }
 
-    document.getElementById(id)?.scrollIntoView();
-    setCurrentSection(section);
+      setCurrentSection(PageType.None);
+
+      await delay(1000).then(() => {
+        document.getElementById(id)?.scrollIntoView();
+        setCurrentSection(section);
+      });
+    }
   }
 
   return (
     <div className="app">
       <div className='app-body'>
         <div className='app-body-redirect-blocks'>
-          <RedirectBlocks 
+          <RedirectBlocks
             currentSection={currentSection}
             moveToSection={moveToSection} />
         </div>
@@ -33,12 +40,12 @@ function App() {
             <Introduction />
           </div>
           <div className='app-body-right-side'>
-            {currentSection === PageType.AboutMe &&
+            <div className={currentSection === PageType.AboutMe ? 'app-body-right-side-visible' : 'app-body-right-side-hidden'}>
               <AboutMe />
-            }
-            {currentSection === PageType.Projects &&
+            </div>
+            <div className={currentSection === PageType.Projects ? 'app-body-right-side-visible' : 'app-body-right-side-hidden'}>
               <Projects />
-            }
+            </div>
           </div>
         </div>
       </div>

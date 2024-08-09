@@ -7,11 +7,12 @@
 .redirect-blocks > div {
     align-items: center;
     border: 1px solid;
-    cursor: pointer;
+    cursor: pointer!important;
     display: grid;
     height: 40px;
     margin: 35px;
     width: 150px;
+    z-index: 10;
 }
 
 .redirect-block-selected {

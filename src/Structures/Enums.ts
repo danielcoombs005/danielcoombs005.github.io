@@ -4,10 +4,10 @@ export enum Direction {
 }
 
 export enum PageType {
-    LandingPage = 1,
-    AboutMe = 2,
-    Contact = 3,
-    Projects = 4
+    AboutMe = 1,
+    Contact = 2,
+    Projects = 3,
+    None = 4
 }
 
 export enum Status {
