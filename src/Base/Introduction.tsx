@@ -1,10 +1,13 @@
 import { useState } from 'react';
-import { delay } from './CommonLogic';
 import './Introduction.css'
 
 const delayFactor: number = 1 * 1000; // 1 second
 const messageTime: number = 10 * 1000; // 10 seconds
 const messages: string[] = ['I build websites.', 'I love puzzles! Maybe you should try the one on this page... :)'];
+
+const delay = (timeInMS: number): Promise<any> => {
+    return new Promise(resolve => setTimeout(resolve, timeInMS));
+};
 
 export default function Introduction() {
     const [messageIndex, setMessageIndex] = useState(0);
