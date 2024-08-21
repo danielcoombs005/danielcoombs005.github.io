@@ -15,7 +15,7 @@
             "image": "project-board.jpg",
             "githubURL": "https://github.com/danielcoombs005/project-board",
             "languages": ["HTML5", "CSS3", "TypeScript"],
-            "name": "Portfolio",
+            "name": "Project Board",
             "status": "Complete",
             "tools": ["VS Code"],
             "websiteURL": "https://danielcoombs005.github.io/project-board/index.html"
