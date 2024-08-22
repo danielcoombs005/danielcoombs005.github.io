@@ -1,26 +1,24 @@
 import { useState } from 'react';
+import { delay } from './CommonLogic';
 import './Introduction.css'
 
 const delayFactor: number = 1 * 1000; // 1 second
 const messageTime: number = 10 * 1000; // 10 seconds
-const messages: string[] = ['I have over 2 years of professional experience.',
-    'I build websites.', 
+const messages: string[] = ['I build websites.', 
+    'I have over 2 years of professional experience.',
     'I primarily use React, C#, .NET, and MongoDB.',
     'I also have experience with Angular, Python, and SQL.',
     'I love puzzles! Maybe you should try the one on this page... :)'];
 
-const delay = (timeInMS: number): Promise<any> => {
-    return new Promise(resolve => setTimeout(resolve, timeInMS));
-};
-
 export default function Introduction() {
     const [messageIndex, setMessageIndex] = useState(0);
 
-    setTimeout(async () => {
+    setTimeout(() => {
         let messageElement = document.getElementById('summary');
         if (messageElement !== null) {
             messageElement.classList.remove('fadeIn');
             messageElement.classList.add('fadeOut');
+            console.log('changing', new Date().getTime())
             delay(delayFactor).then(() => {
                 const nextMessageIndex: number = (messageIndex + 1) % messages.length;
                 setMessageIndex(nextMessageIndex);

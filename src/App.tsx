@@ -7,9 +7,11 @@ import AboutMe from './Pages/AboutMe';
 import Projects from './Pages/ProjectPage';
 import { PageType } from './Structures/Enums';
 import './App.css';
+import React from 'react';
 
 function App() {
   let [currentSection, setCurrentSection] = useState(PageType.AboutMe);
+  const introductionComponent = React.useMemo(() => <Introduction />, [])
 
   async function moveToSection(id: string, section: number) {
     if (section !== currentSection) {
@@ -37,7 +39,7 @@ function App() {
         </div>
         <div className='app-body-split'>
           <div className='app-body-left-side'>
-            <Introduction />
+            {introductionComponent}
           </div>
           <div className='app-body-right-side'>
             <div className={currentSection === PageType.AboutMe ? 'app-body-right-side-visible' : 'app-body-right-side-hidden'}>
