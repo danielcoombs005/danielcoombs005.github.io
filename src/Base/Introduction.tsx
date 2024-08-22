@@ -18,7 +18,6 @@ export default function Introduction() {
         if (messageElement !== null) {
             messageElement.classList.remove('fadeIn');
             messageElement.classList.add('fadeOut');
-            console.log('changing', new Date().getTime())
             delay(delayFactor).then(() => {
                 const nextMessageIndex: number = (messageIndex + 1) % messages.length;
                 setMessageIndex(nextMessageIndex);
