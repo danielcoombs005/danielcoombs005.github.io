@@ -48,11 +48,11 @@ export default function ProjectBlock(props: IProjectData) {
             <div className='project-block-inner'>
                 <div className='project-block-left'>
                     <a href={props.websiteURL} target='_'>{props.name}</a>
-                    <div className='project-block-left-status'>Status: {renderCircle(props.status)} {props.status}</div>
-                    <div className='project-block-repository'>
+                    <div className='project-block-left-status no-select'>Status: {renderCircle(props.status)} {props.status}</div>
+                    <div className='project-block-repository no-select'>
                         <a href={props.githubURL} target='_'>Repository</a>
                     </div>
-                    <img className='project-image' src={process.env.PUBLIC_URL+'/'+props.image} alt={props.image} />
+                    <img className='project-image no-select' src={process.env.PUBLIC_URL+'/'+props.image} alt={props.image} />
                 </div>
                 <div className='project-block-right'>
                     <div className='project-block-description'>{props.description}</div> 

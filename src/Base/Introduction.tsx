@@ -28,7 +28,7 @@ export default function Introduction() {
     }, messageTime);
 
     return (
-        <div className='introduction'>
+        <div className='introduction no-select'>
             <div id='name'>Daniel Coombs</div>
             <div id='title'>Full Stack Software Developer</div>
             <div id='sources'>

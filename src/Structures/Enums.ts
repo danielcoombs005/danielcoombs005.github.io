@@ -1,3 +1,9 @@
+export enum ContactReason {
+    Hire = 1,
+    Bug = 2,
+    FeatureRequest = 3
+}
+
 export enum Direction {
     Up = 1,
     Down = 2

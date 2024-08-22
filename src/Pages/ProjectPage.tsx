@@ -70,12 +70,12 @@ export default class Projects extends React.Component<any, any> {
             <div id='project-page'>
                 {this.displayProjects()}
                 <div className='project-page-number-section'>
-                    <img className='project-image-left'
+                    <img className='project-image-left no-select'
                         src={`${process.env.PUBLIC_URL}/up-arrow${this.state.upArrowDisabled ? '-disabled' : ''}.png`}
                         alt={'UP ARROW'}
                         onClick={() => this.updatePage(Direction.Up)} />
-                    <span>Page {this.state.projectPage + 1} of {this.getTotalPageCount()}</span>
-                    <img className='project-image-right'
+                    <span className='no-select'>Page {this.state.projectPage + 1} of {this.getTotalPageCount()}</span>
+                    <img className='project-image-right no-select'
                         src={`${process.env.PUBLIC_URL}/down-arrow${this.state.downArrowDisabled ? '-disabled' : ''}.png`}
                         alt={'DOWN ARROW'}
                         onClick={() => this.updatePage(Direction.Down)} />

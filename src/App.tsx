@@ -4,6 +4,7 @@ import Footer from './Base/Footer';
 import Introduction from './Base/Introduction';
 import RedirectBlocks from './Base/RedirectBlocks';
 import AboutMe from './Pages/AboutMe';
+import Contact from './Pages/Contact';
 import Projects from './Pages/ProjectPage';
 import { PageType } from './Structures/Enums';
 import './App.css';
@@ -44,6 +45,9 @@ function App() {
           <div className='app-body-right-side'>
             <div className={currentSection === PageType.AboutMe ? 'app-body-right-side-visible' : 'app-body-right-side-hidden'}>
               <AboutMe />
+            </div>
+            <div className={currentSection === PageType.Contact ? 'app-body-right-side-visible' : 'app-body-right-side-hidden'}>
+              <Contact />
             </div>
             <div className={currentSection === PageType.Projects ? 'app-body-right-side-visible' : 'app-body-right-side-hidden'}>
               <Projects />
