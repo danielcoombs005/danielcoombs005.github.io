@@ -6,6 +6,7 @@ import RedirectBlocks from './Base/RedirectBlocks';
 import AboutMe from './Pages/AboutMe';
 import Contact from './Pages/Contact';
 import Projects from './Pages/ProjectPage';
+import Puzzle from './Base/Puzzle/Puzzle';
 import { PageType } from './Structures/Enums';
 import './App.css';
 import React from 'react';
@@ -32,7 +33,7 @@ function App() {
 
   return (
     <div className="app">
-      <div className='app-body'>
+      <div className='app-body no-select'>
         <div className='app-body-redirect-blocks'>
           <RedirectBlocks
             currentSection={currentSection}
@@ -55,6 +56,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Puzzle />
       <Footer />
     </div>
   );

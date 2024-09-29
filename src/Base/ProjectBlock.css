@@ -13,12 +13,12 @@
 }
 
 .project-block-description {
-    height: 176px;
-    text-align: justify;
+    height: 80%;
     padding-left: 27px;
     padding-right: 5px;
     overflow-y: scroll;
     scrollbar-width: none;
+    text-align: justify;
     white-space: preserve;
 }
 
@@ -39,6 +39,7 @@
 
 .project-block-inner {
     display: flex;
+    height: 100%;
     margin: 10px;
 }
 
@@ -74,10 +75,16 @@
 
 .project-block-right {
     margin-top: 5px;
+    max-height: 90%;
 }
 
 .project-block-right-tools {
     display: flex;
+    height: 20%;
     justify-content: center;
+    overflow-y: scroll;
+    padding-left: 27px;
+    padding-right: 5px;
+    scrollbar-width: none;
     white-space: preserve;
 }

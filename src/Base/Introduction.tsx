@@ -8,7 +8,7 @@ const messages: string[] = ['I build websites.',
     'I have over 2 years of professional experience.',
     'I primarily use React, C#, .NET, and MongoDB.',
     'I also have experience with Angular, Python, and SQL.',
-    'I love puzzles! Maybe you should try the one on this page... :)'];
+    'I love puzzles! They\'re the highlight of the party! Maybe you should try the one on this page :)'];
 
 export default function Introduction() {
     const [messageIndex, setMessageIndex] = useState(0);
@@ -28,7 +28,7 @@ export default function Introduction() {
     }, messageTime);
 
     return (
-        <div className='introduction no-select'>
+        <div className='introduction'>
             <div id='name'>Daniel Coombs</div>
             <div id='title'>Full Stack Software Developer</div>
             <div id='sources'>
