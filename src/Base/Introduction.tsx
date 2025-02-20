@@ -5,7 +5,7 @@ import './Introduction.css'
 const delayFactor: number = 1 * 1000; // 1 second
 const messageTime: number = 10 * 1000; // 10 seconds
 const messages: string[] = ['I build websites.', 
-    'I have over 2 years of professional experience.',
+    'I have over 2 years of full-stack development experience.',
     'I primarily use React, C#, .NET, and MongoDB.',
     'I also have experience with Angular, Python, and SQL.',
     'I love puzzles! They\'re the highlight of the party! Maybe you should try the one on this page :)'];
@@ -30,7 +30,7 @@ export default function Introduction() {
     return (
         <div className='introduction'>
             <div id='name'>Daniel Coombs</div>
-            <div id='title'>Full Stack Software Developer</div>
+            <div id='title'>Full-Stack Software Developer</div>
             <div id='sources'>
                 <a href='https://github.com/danielcoombs005' target='_'>Github</a>
                 <span> | </span>
