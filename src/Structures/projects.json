@@ -11,6 +11,16 @@
             "websiteURL": "https://danielcoombs005.github.io/"
         },
         {
+            "description": "A series of visual demonstrations of popular sorting algorithms using bar charts, dynamic delay and sortable elements, and colorful representations.\n\nMy greatest challenge during this project was trying to make the algorithms visually possible. The algorithms are straightforward in implementation, but adding the visual aspect to a dynamically changing array, especially for merge and quick sorts, was quite the challenge!",
+            "image": "sorting-algorithm.jpg",
+            "githubURL": "https://github.com/danielcoombs005/sorting-algorithms",
+            "languages": ["HTML5", "CSS3", "JavaScript"],
+            "name": "Sorting Algorithm",
+            "status": "In Progress",
+            "tools": ["React", "VS Code"],
+            "websiteURL": "https://danielcoombs005.github.io/sorting-algorithms"
+        },
+        {
             "description": "A project board that provides a visual display to keep track of my current projects' tasks and their individual statuses.\n\nThis page is intended to showcase the current progression of my projects, but the functionality of this project will be reserved for local use only. I may extend this project in the future to include an API for easier management of the tasks.",
             "image": "project-board.jpg",
             "githubURL": "https://github.com/danielcoombs005/project-board",
@@ -19,16 +29,6 @@
             "status": "Complete",
             "tools": ["VS Code"],
             "websiteURL": "https://danielcoombs005.github.io/project-board/index.html"
-        },
-        {
-            "description": "A series of visual demonstrations of popular sorting algorithms using bar charts, dynamic delay and sortable elements, and colorful representations.\n\nMy greatest challenge during this project was trying to make the algorithms visually possible. The algorithms are straightforward in implementation, but adding the visual aspect to a dynamically changing array, especially for merge and quick sorts, was quite the challenge!",
-            "image": "",
-            "githubURL": "",
-            "languages": ["HTML5", "CSS3", "TypeScript"],
-            "name": "Sorting Algorithm",
-            "status": "In Progress",
-            "tools": ["React", "VS Code"],
-            "websiteURL": ""
         }
     ]
 }

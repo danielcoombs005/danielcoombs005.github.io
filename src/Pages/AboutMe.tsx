@@ -10,7 +10,7 @@ export default function AboutMe() {
             </p>
             <p>
                 Currently based in Illinois, I'm looking for my next adventure.
-                I have over two years of professional full stack development with an emphasis on C# using .NET Core; React using TypeScript, HTML5, and CSS3; and MongoDB.
+                I have over two years of professional full-stack development experience with an emphasis on C# using .NET Core; React using TypeScript, HTML5, and CSS3; and MongoDB.
                 I also have industry experience with Angular, MVC, SQL, and RabbitMQ.
                 Throughout 2024, I've learned and explored more languages, such as Python, Java, Go, and C++.
                 I've also encountered other languages and tools, such as Node, Vue, Dart, R, Ruby, and Rust, and I would love to learn these more.
